@@ -3,6 +3,7 @@ package mudin.iv.recipeapp.viewmodel;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import mudin.iv.recipeapp.utils.AppConstants;
 import mudin.iv.recipeapp.utils.PaperDbManager;
 import mudin.iv.recipeapp.model.Recipe;
 import mudin.iv.recipeapp.utils.AppXBus;
@@ -30,7 +31,7 @@ public class MainViewModel extends ViewModel {
     }
 
     public void init(){
-//        populateList();
+
         ArrayList<Recipe> storeList = PaperDbManager.RECIPE.INSTANCE.readRecipeList();
 
         if(storeList == null){
@@ -38,6 +39,11 @@ public class MainViewModel extends ViewModel {
         }
 
         recipeArrayList = storeList;
+
+
+        if(recipeArrayList.size() <= 0){
+            populateList();
+        }
         recipeLiveData.setValue(recipeArrayList);
     }
 
@@ -51,16 +57,13 @@ public class MainViewModel extends ViewModel {
 
     public void populateList(){
         recipeArrayList = new ArrayList<>();
-        Recipe recipe = new Recipe();
-        recipe.setTitle("Automated Testing Script");
-        Recipe recipe2 = new Recipe();
-        recipe2.setTitle("Automated Testing Script 2");
-        Recipe recipe3 = new Recipe();
-        recipe3.setTitle("Automated Testing Script 3");
-        Recipe recipe4 = new Recipe();
-        recipe4.setTitle("Automated Testing Script 4");
-        Recipe recipe5 = new Recipe();
-        recipe5.setTitle("Automated Testing Script 5");
+        AppConstants.PREFILLED pf = AppConstants.PREFILLED.INSTANCE;
+
+        Recipe recipe = new Recipe(pf.getTITLE_ONE(), pf.getTYPE_ONE(), pf.getINGREDIENT_ONE(), pf.getSTEPS_ONE(),pf.getIMAGE_ONE());
+        Recipe recipe2 = new Recipe(pf.getTITLE_TWO(), pf.getTYPE_TWO(), pf.getINGREDIENT_TWO(), pf.getSTEPS_TWO(),pf.getIMAGE_TWO());
+        Recipe recipe3 = new Recipe(pf.getTITLE_THREE(), pf.getTYPE_THREE(), pf.getINGREDIENT_THREE(), pf.getSTEPS_THREE(),pf.getIMAGE_THREE());
+        Recipe recipe4 = new Recipe(pf.getTITLE_ONE(), pf.getTYPE_ONE(), pf.getINGREDIENT_ONE(), pf.getSTEPS_ONE(),pf.getIMAGE_ONE());
+        Recipe recipe5 = new Recipe(pf.getTITLE_TWO(), pf.getTYPE_TWO(), pf.getINGREDIENT_TWO(), pf.getSTEPS_TWO(),pf.getIMAGE_TWO());
 
 
         recipeArrayList.add(recipe);
@@ -69,6 +72,8 @@ public class MainViewModel extends ViewModel {
         recipeArrayList.add(recipe4);
         recipeArrayList.add(recipe5);
         recipeArrayList.add(recipe);
+
+        PaperDbManager.RECIPE.INSTANCE.saveRecipeList(recipeArrayList);
     }
 
     public void addNewRecipe(Recipe recipe){

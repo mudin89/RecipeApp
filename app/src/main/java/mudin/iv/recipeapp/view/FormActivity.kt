@@ -33,7 +33,6 @@ class FormActivity : AppCompatActivity() {
     lateinit var btnBack : ImageView
     var id : Int? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form)
@@ -87,12 +86,27 @@ class FormActivity : AppCompatActivity() {
     //fill in the view with data
     fun fillInTheData(recipe: Recipe){
         etTitle.text = recipe.title
-        spinnerType.setSelection(0)
+        spinnerType.setSelection(getPositionByType(recipe.type))
         etIngredients.text = recipe.ingredient
         etSteps.text = recipe.steps
         etImageLink.text = recipe.imageLink
 
+        mainTitle.text = recipe.title
+
         tvConfirm.text = "Save Recipe"
+    }
+
+    fun getPositionByType(type:String) : Int{
+        when (type) {
+            "Fast Food" -> return 0
+            "Homemade" -> return 1
+            "Healthy" -> return 2
+            "Malaysia Speciality" -> return 3
+            "Western" -> return 4
+            else -> { // Note the block
+                return 0
+            }
+        }
     }
 
 
@@ -122,12 +136,13 @@ class FormActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            var recipe = Recipe()
+            var recipe = Recipe("","","","","")
 
             recipe.title = etTitle.text.toString()
             recipe.type = spinnerType.selectedItem.toString()
             recipe.steps =etSteps.text.toString()
             recipe.ingredient = etIngredients.text.toString()
+            recipe.imageLink = etImageLink.text.toString()
 
             if(id != null){
                 doSave(id!!, recipe)

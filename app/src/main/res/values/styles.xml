@@ -83,7 +83,13 @@
     </style>
 
     <style name="TextGrey16">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey_800</item>
+        <item name="fontName">ROBOTO_LIGHT</item>
+    </style>
+
+    <style name="TextGreyBold16">
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/grey_800</item>
         <item name="fontName">ROBOTO_BOLD</item>
     </style>

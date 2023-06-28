@@ -48,10 +48,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         Recipe recipe = userArrayList.get(position);
         RecyclerViewViewHolder viewHolder= (RecyclerViewViewHolder) holder;
 
+        String stepTitle = "Steps:\n";
+        String ingredientTitle = "Ingredient:\n";
+
         viewHolder.tvTitle.setText(recipe.getTitle());
         viewHolder.tvType.setText(recipe.getType());
-        viewHolder.tvIngredients.setText(recipe.getIngredient());
-        viewHolder.tvSteps.setText(recipe.getSteps());
+        viewHolder.tvIngredients.setText(stepTitle+recipe.getIngredient());
+        viewHolder.tvSteps.setText(ingredientTitle+ recipe.getSteps());
         String imageLink = recipe.getImageLink().equals("") ? "https://previews.123rf.com/images/akeeris/akeeris1306/akeeris130600107/20500993-meal-time-full-round-table-with-colorful-food-in-restaurant.jpg" : recipe.getImageLink();
 
         Picasso

@@ -35,7 +35,7 @@
                 app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
             <mudin.iv.recipeapp.view.custom.CustomTextView
                 android:id="@+id/tvType"
-                style="@style/TextGrey18"
+                style="@style/TextGreyBold16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title"
@@ -44,7 +44,7 @@
 
             <mudin.iv.recipeapp.view.custom.CustomTextView
                 android:id="@+id/tvIngredient"
-                style="@style/TextGrey18"
+                style="@style/TextGrey16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title"
@@ -54,7 +54,7 @@
 
             <mudin.iv.recipeapp.view.custom.CustomTextView
                 android:id="@+id/tvStep"
-                style="@style/TextGrey18"
+                style="@style/TextGrey16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title"
@@ -64,7 +64,7 @@
             <ImageView
                 android:id="@+id/ivImage"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="80dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 android:text="Title"
