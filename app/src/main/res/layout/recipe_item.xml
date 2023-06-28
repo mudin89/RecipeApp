@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="6dp">
+
+    <com.google.android.material.card.MaterialCardView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="25dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".1" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvTitle"
+                style="@style/TextGrey22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+                app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvStartDateTitle"
+                style="@style/TextGrey18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Start Date"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+                app:layout_constraintRight_toRightOf="@+id/guidelineMiddle1"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="21 Oct 2019"
+                style="@style/TextGrey16"
+                app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+                app:layout_constraintRight_toRightOf="@+id/guidelineMiddle1"
+                app:layout_constraintTop_toBottomOf="@+id/tvStartDateTitle"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvEndDateTitle"
+                style="@style/TextGrey18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="End Date"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineMiddle1"
+                app:layout_constraintRight_toRightOf="@+id/guidelineMiddle2"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:text="23 Oct 2019"
+                style="@style/TextGrey16"
+                app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineMiddle1"
+                app:layout_constraintRight_toRightOf="@+id/guidelineMiddle2"
+                app:layout_constraintTop_toBottomOf="@+id/tvStartDateTitle"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvCountDownTitle"
+                style="@style/TextGrey18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Time Left"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineMiddle2"
+                app:layout_constraintRight_toRightOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvCountDown"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:text="23 hours 22 min"
+                style="@style/TextGrey16"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineMiddle2"
+                app:layout_constraintRight_toRightOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@+id/tvStartDateTitle" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent=".70" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineMiddle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".35" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineMiddle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".65" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+            <LinearLayout
+                app:layout_constraintTop_toTopOf="@id/guidelineBottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@color/yellow_200"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"/>
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvStatusTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                style="@style/TextGrey18"
+                android:text="Status"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/guidelineLeft"
+                app:layout_constraintTop_toTopOf="@+id/guidelineBottom" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:text="Incomplete"
+                style="@style/TextGrey16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintLeft_toRightOf="@id/tvStatusTitle"
+                app:layout_constraintRight_toRightOf="@id/guideline50"
+                app:layout_constraintTop_toTopOf="@+id/guidelineBottom" />
+
+            <CheckBox
+                android:id="@+id/cbComplete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tvCheckBoxTitle"
+                app:layout_constraintRight_toRightOf="@id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineBottom" />
+
+            <mudin.iv.recipeapp.view.custom.CustomTextView
+                android:id="@+id/tvCheckBoxTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextGrey"
+                android:text="Tick if completed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/guideline50"
+                app:layout_constraintRight_toLeftOf="@+id/cbComplete"
+                app:layout_constraintTop_toBottomOf="@id/guidelineBottom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

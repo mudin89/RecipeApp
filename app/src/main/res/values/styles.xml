@@ -1,0 +1,128 @@
+<resources>
+
+    <style name="CustomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="TitleBlue16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/blue_800</item>
+        <item name="fontName">ROBOTO_BOLD</item>
+    </style>
+
+    <style name="TitleBlue14">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/blue_800</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TextWhite">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TextWhite18">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TextWhite18Bold">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontName">ROBOTO_BOLD</item>
+    </style>
+
+
+    <style name="TextWhite24">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TextWhite16">
+        <item name="android:textSize">16sp</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TextWhite16Bold">
+        <item name="android:textSize">16sp</item>
+        <item name="fontName">ROBOTO_BOLD</item>
+    </style>
+
+    <style name="TextGrey">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey_600</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="EditTextGrey">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">@color/grey_500</item>
+        <item name="android:textColor">@color/grey_600</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TextGrey26">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/grey_800</item>
+        <item name="fontName">ROBOTO_BOLD</item>
+    </style>
+
+    <style name="TextGrey22">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/grey_800</item>
+        <item name="fontName">ROBOTO_BOLD</item>
+    </style>
+
+    <style name="TextGrey18">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/grey_800</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TextGrey16">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/grey_800</item>
+        <item name="fontName">ROBOTO_BOLD</item>
+    </style>
+
+    <style name="TitleWhite16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TitleRed22">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/red_600</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TitleRed16">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/red_600</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TitleRed13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/red_600</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="TitleBlue24">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/blue_800</item>
+        <item name="fontName">ROBOTO_REGULAR</item>
+    </style>
+
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/grey_300</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

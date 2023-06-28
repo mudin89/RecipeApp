@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="fontName">
+        <enum name="Titillium_SemiBold" value="0"></enum>
+        <enum name="Titillium_Light" value="1"></enum>
+        <enum name="Titillium_Regular" value="2"></enum>
+        <enum name="Titillium_Bold" value="3"></enum>
+        <enum name="ROBOTO_REGULAR" value="4"></enum>
+        <enum name="ROBOTO_LIGHT" value="5"></enum>
+        <enum name="ROBOTO_BOLD" value="6"></enum>
+        <enum name="ROBOTO_BOLDITALIC" value="7"></enum>
+    </attr>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="fontName" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomRadioButton">
+        <attr name="fontName" />
+
+    </declare-styleable>
+
+
+</resources>
